@@ -4056,8 +4056,8 @@ header.major h2 {
   @media screen and (max-width: 768px) {
     .top-nav ul {
       flex-direction: column;
-      align-items: flex-end;
-      padding-right: 20px;
+      align-items: flex-start;
+      padding-left: 20px;
       background-color: rgba(0, 0, 0, 0.85);
       border-radius: 0 0 0 10px;
     }
