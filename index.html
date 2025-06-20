@@ -246,22 +246,22 @@
 			<script src="assets/js/main.js"></script>
 			<script>
 				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-					anchor.addEventListener('click', function (e) {
+				anchor.addEventListener('click', function (e) {
 					e.preventDefault();
 					const target = document.querySelector(this.getAttribute('href'));
-					const offset = 50; // adjust based on your nav height
-					if (target) {
-						const elementPosition = target.getBoundingClientRect().top;
-						const offsetPosition = elementPosition + window.scrollY - offset;
+					const nav = document.querySelector('#nav');
+					const navHeight = nav ? nav.getBoundingClientRect().height : 0;
+					const buffer = 5;
 
-						window.scrollTo({
-						top: offsetPosition,
-						behavior: 'smooth'
-						});
+					console.log('navHeight:', navHeight, 'buffer:', buffer);
+
+					if (target) {
+					const rect = target.getBoundingClientRect();
+					const offsetPosition = rect.top + window.scrollY - navHeight - buffer;
+					window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
 					}
-					});
 				});
-			</script>
-					
+				});
+			</script>	
 	</body>
 </html>
