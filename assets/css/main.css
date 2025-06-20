@@ -4016,24 +4016,21 @@ header.major h2 {
 }
 
 <style>
-  /* ✅ Default (Desktop) Styles */
   .top-nav {
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #6A4E9C;
     padding: 20px 30px 0 0;
-    z-index: 999; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	
+    z-index: 999;
   }
 
   .top-nav ul {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto; 
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    gap: 12px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin: 0;
+    padding: 0 30px;
+    flex-wrap: wrap;
   }
 
   .top-nav ul li a {
@@ -4045,7 +4042,6 @@ header.major h2 {
     display: inline-block;
     border-bottom: 1px dotted transparent;
     transition: color 0.3s, border-bottom-color 0.3s;
-    white-space: nowrap;
   }
 
   .top-nav ul li a:hover,
@@ -4054,39 +4050,14 @@ header.major h2 {
     border-bottom-color: #ffcc00;
   }
 
-  /* ✅ Mobile-Only Overrides */
+  /* ✅ Fix nav only on screens 768px and smaller */
   @media screen and (max-width: 768px) {
     .top-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #f0f0f0; /* light grey */
-      padding: 15px 10px;
-    }
+      display: none;
+      }
 
     body {
-      padding-top: 70px; /* prevent content hiding under nav */
-    }
-
-    .top-nav ul {
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      padding: 0;
-    }
-
-    .top-nav ul li a {
-      font-size: 14px;
-      color: #333;
-      padding: 10px 6px;
-    }
-
-    .top-nav ul li a:hover,
-    .top-nav ul li a:focus {
-      color: #6A4E9C;
-      border-bottom-color: #6A4E9C;
+      padding-top: 0px; /* Match nav height on mobile */
     }
   }
 </style>
-
