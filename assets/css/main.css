@@ -3985,7 +3985,7 @@ input, select, textarea {
 
 .project-item footer {
   margin-bottom: 0;        /* Remove extra bottom space */
-  padding-bottom: 0;
+  padding-bottom: 0.5rem;
 }
 
 .project-item .actions {
