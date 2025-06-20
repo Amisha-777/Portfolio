@@ -4016,55 +4016,65 @@ header.major h2 {
 }
 
 <style>
+.top-nav {
+  width: 100%;
+  padding: 20px 30px 0 0;
+  background-color: #6A4E9C; /* or transparent */
+  z-index: 999;
+  transition: background-color 0.2s ease, padding 0.2s ease;
+}
+
+/* Nav items */
+.top-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 30px;
+  margin: 0;
+  padding: 0 30px;
+  flex-wrap: wrap;
+}
+
+.top-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  display: inline-block;
+  border-bottom: 1px dotted transparent;
+  transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+.top-nav ul li a:hover,
+.top-nav ul li a:focus {
+  color: #ffcc00;
+  border-bottom-color: #ffcc00;
+}
+
+/* ✅ Only fix nav on screens 768px or smaller */
+@media screen and (max-width: 768px) {
   .top-nav {
     position: fixed;
     top: 0;
-    right: 0;
-    width: 100%;
-    padding: 20px 30px 0 0;
-    background-color: transparent;
-    text-align: right;
-    z-index: 999;
-    transition: background-color 0.2s ease, padding 0.2s ease;
+    left: 0;
+    background-color: #6A4E9C;
+  }
+
+  body {
+    padding-top: 80px; /* Prevent content from hiding under nav */
   }
 
   .top-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
-    margin: 0;
-    padding: 0 30px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    gap: 10px;
   }
 
   .top-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    padding: 8px 12px;
-    display: inline-block;
-    transition: color 0.2s;
+    font-size: 18px;
+    padding: 10px 0;
   }
-
-  .top-nav ul li a:hover {
-    color: #ffcc00; /* optional hover color */
-  }
-
-  /* Responsive for smaller screens */
-  @media screen and (max-width: 768px) {
-    .top-nav ul {
-      flex-direction: column;
-      align-items: flex-end;
-      padding-right: 20px;
-      background-color: rgba(0, 0, 0, 0.85);
-      border-radius: 0 0 0 10px;
-    }
-
-    .top-nav ul li a {
-      font-size: 18px;
-      padding: 10px 0;
-    }
-  }
+}
 </style>
