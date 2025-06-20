@@ -3925,8 +3925,11 @@ input, select, textarea {
 }
 
 .project-item img {
-  margin-bottom: 1rem;
+  width: 100%;
+  height: 200px;            /* Much better on all screen sizes */
+  object-fit: cover;
   border-radius: 6px;
+  margin-bottom: 1rem;      /* Adds space below image */
 }
 
 .project-item h3 {
@@ -3984,7 +3987,7 @@ input, select, textarea {
 }
 
 .project-item footer {
-  margin-bottom: 0;        /* Remove extra bottom space */
+  margin-top: 1rem;         /* Space above the button group */
   padding-bottom: 0.5rem;
 }
 
@@ -4007,17 +4010,31 @@ header.major h2 {
   margin-top: 0.5rem;
 }
 
-.project-item img {
+.project-item img,
+.hover-image {
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
   width: 100%;
-  height: 150px;       /* Or another height you prefer */
-  object-fit: cover;   /* Ensures the image fills the space and crops if needed */
-  border-radius: 6px;
 }
 
 #main > section.main {
   padding: 1rem 2rem; /* Adjust as needed (default might be 4rem 2rem) */
 }
 
+@media screen and (min-width: 1024px) {
+  .hover-container {
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+  }
+
+  .hover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
 
 .hover-container {
   position: relative;
