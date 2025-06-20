@@ -2609,20 +2609,25 @@ input, select, textarea {
 
 /* Icons */
 
-	ul.icons {
-		cursor: default;
-		list-style: none;
-		padding-left: 0;
-	}
+ul.icons {
+	cursor: default;
+	list-style: none;
+	padding-left: 0;
+}
 
-		ul.icons li {
-			display: inline-block;
-			padding: 0 0.65em 0 0;
-		}
+ul.icons li {
+	display: inline-block;
+	padding: 0 0.65em 0 0;
+}
 
-			ul.icons li:last-child {
-				padding-right: 0 !important;
-			}
+ul.icons li:last-child {
+	padding-right: 0 !important;
+}
+
+ul.icons li .icon:before {
+	font-size: 1.8rem; /* ⬅️ Adjust this value to your liking */
+}
+
 
 /* Section/Article */
 
@@ -4145,4 +4150,12 @@ header.major h2 {
   max-width: 100% !important;
   width: 100% !important;
   margin: 0 auto !important;
+}
+
+#footer {
+  background-color: #6b4e9c !important;
+  color: white;
+  border: none;
+  margin: 0;
+  padding: 3em 2em 1em 2em;
 }
