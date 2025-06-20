@@ -4014,3 +4014,57 @@ header.major h2 {
 .hover-container:hover .hover-text {
   opacity: 1;
 }
+
+<style>
+  .top-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 30px 0 0;
+    background-color: transparent;
+    text-align: right;
+    z-index: 999;
+    transition: background-color 0.2s ease, padding 0.2s ease;
+  }
+
+  .top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin: 0;
+    padding: 0 30px;
+    flex-wrap: wrap;
+  }
+
+  .top-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: color 0.2s;
+  }
+
+  .top-nav ul li a:hover {
+    color: #ffcc00; /* optional hover color */
+  }
+
+  /* Responsive for smaller screens */
+  @media screen and (max-width: 768px) {
+    .top-nav ul {
+      flex-direction: column;
+      align-items: flex-end;
+      padding-right: 20px;
+      background-color: rgba(0, 0, 0, 0.85);
+      border-radius: 0 0 0 10px;
+    }
+
+    .top-nav ul li a {
+      font-size: 18px;
+      padding: 10px 0;
+    }
+  }
+</style>
