@@ -4016,27 +4016,26 @@ header.major h2 {
 }
 
 <style>
-  /* Default: NOT fixed */
   .top-nav {
     width: 100%;
-    background-color: #6A4E9C;
-    padding: 20px 30px 0 0;
+    background-color: #f0f0f0; /* light grey background */
+    padding: 15px 20px;
     z-index: 999;
   }
 
   .top-nav ul {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-    gap: 30px;
+    justify-content: center;
+    gap: 15px;
     margin: 0;
-    padding: 0 30px;
+    padding: 0;
     flex-wrap: wrap;
   }
 
   .top-nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #333;
     font-weight: 500;
     font-size: 16px;
     padding: 8px 12px;
@@ -4047,33 +4046,32 @@ header.major h2 {
 
   .top-nav ul li a:hover,
   .top-nav ul li a:focus {
-    color: #ffcc00;
-    border-bottom-color: #ffcc00;
+    color: #6A4E9C;
+    border-bottom-color: #6A4E9C;
   }
 
-  /* ✅ Fix nav only on screens 768px and smaller */
+  /* ✅ Fix nav only on mobile */
   @media screen and (max-width: 768px) {
     .top-nav {
       position: fixed;
       top: 0;
       left: 0;
-      padding: 15px 20px;
     }
 
     body {
-      padding-top: 80px; /* Match nav height on mobile */
+      padding-top: 70px; /* match nav height */
     }
 
     .top-nav ul {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 0 20px;
+      flex-direction: row;     /* <-- keep horizontal */
+      justify-content: center; /* center the nav */
+      align-items: center;
+      padding: 0;
     }
 
     .top-nav ul li a {
-      font-size: 18px;
-      padding: 10px 0;
+      font-size: 14px;
+      padding: 10px 8px;
     }
   }
 </style>
