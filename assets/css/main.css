@@ -4016,65 +4016,64 @@ header.major h2 {
 }
 
 <style>
-.top-nav {
-  width: 100%;
-  padding: 20px 30px 0 0;
-  background-color: #6A4E9C; /* or transparent */
-  z-index: 999;
-  transition: background-color 0.2s ease, padding 0.2s ease;
-}
-
-/* Nav items */
-.top-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  gap: 30px;
-  margin: 0;
-  padding: 0 30px;
-  flex-wrap: wrap;
-}
-
-.top-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-size: 16px;
-  padding: 8px 12px;
-  display: inline-block;
-  border-bottom: 1px dotted transparent;
-  transition: color 0.3s, border-bottom-color 0.3s;
-}
-
-.top-nav ul li a:hover,
-.top-nav ul li a:focus {
-  color: #ffcc00;
-  border-bottom-color: #ffcc00;
-}
-
-/* ✅ Only fix nav on screens 768px or smaller */
-@media screen and (max-width: 768px) {
+  /* Default: NOT fixed */
   .top-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
+    width: 100%;
     background-color: #6A4E9C;
-  }
-
-  body {
-    padding-top: 80px; /* Prevent content from hiding under nav */
+    padding: 20px 30px 0 0;
+    z-index: 999;
   }
 
   .top-nav ul {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 20px;
-    gap: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin: 0;
+    padding: 0 30px;
+    flex-wrap: wrap;
   }
 
   .top-nav ul li a {
-    font-size: 18px;
-    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 12px;
+    display: inline-block;
+    border-bottom: 1px dotted transparent;
+    transition: color 0.3s, border-bottom-color 0.3s;
   }
-}
+
+  .top-nav ul li a:hover,
+  .top-nav ul li a:focus {
+    color: #ffcc00;
+    border-bottom-color: #ffcc00;
+  }
+
+  /* ✅ Fix nav only on screens 768px and smaller */
+  @media screen and (max-width: 768px) {
+    .top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 15px 20px;
+    }
+
+    body {
+      padding-top: 80px; /* Match nav height on mobile */
+    }
+
+    .top-nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 0 20px;
+    }
+
+    .top-nav ul li a {
+      font-size: 18px;
+      padding: 10px 0;
+    }
+  }
 </style>
