@@ -3211,9 +3211,9 @@ input, select, textarea {
 		transition: background-color 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease, padding 0.2s ease;
 		background-color: #ffffff;
 		color: #636363;
-		position: absolute;
-		width: 64em;
-		max-width: calc(100% - 4em);
+		position: fixed;
+		width:100em;
+		max-width: 100%;
 		padding: 1em;
 		background-color: #f7f7f7;
 		border-top-left-radius: 0.25em;
@@ -3369,6 +3369,10 @@ input, select, textarea {
 		background-color: #ffffff;
 		color: #636363;
 		border-radius: 0.25em;
+		border-radius: 0;
+		margin: 0;
+		padding: 0;
+		width: 100%;
 	}
 
 		#main input, #main select, #main textarea {
@@ -3613,7 +3617,7 @@ input, select, textarea {
 		}
 
 		#main > .main {
-			padding: 5em 5em 3em 5em ;
+			padding: 5em 0 3em 0 ;
 			border-top: solid 1px #dddddd;
 		}
 
@@ -3637,15 +3641,18 @@ input, select, textarea {
 					border-bottom-left-radius: 0;
 				}
 
+
+	
 		@media screen and (max-width: 1280px) {
 
 			#main > .main {
-				padding: 4em 4em 2em 4em ;
+				padding: 2.5em 0 0.5em 0  ;
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -4em 0 4em -4em;
-					width: calc(100% + 8em);
+					margin: -2.5em 0 1.5em -1em;
+						width: calc(100% + 2em);
+						border-radius: 0;
 				}
 
 		}
@@ -3653,12 +3660,13 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#main > .main {
-				padding: 4em 3em 2em 3em ;
+				padding: 2.5em 0 0.5em 0  ;
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -4em 0 4em -3em;
-					width: calc(100% + 6em);
+					margin: -2.5em 0 1.5em -1em;
+						width: calc(100% + 2em);
+						border-radius: 0;
 				}
 
 		}
@@ -3666,12 +3674,13 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#main > .main {
-				padding: 3em 2em 1em 2em ;
+				padding: 2.5em 0 0.5em 0 ;
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -3em 0 2em -2em;
-					width: calc(100% + 4em);
+					margin: -2.5em 0 1.5em -1em;
+						width: calc(100% + 2em);
+						border-radius: 0;
 				}
 
 		}
@@ -3679,12 +3688,13 @@ input, select, textarea {
 		@media screen and (max-width: 480px) {
 
 			#main > .main {
-				padding: 3em 1.5em 1em 1.5em ;
+				padding: 2.5em 0 0.5em 0 ;
 			}
 
 				#main > .main > .image.main:first-child {
-					margin: -3em 0 1.5em -1.5em;
-					width: calc(100% + 3em);
+					margin: -2.5em 0 1.5em -1em;
+						width: calc(100% + 2em);
+						border-radius: 0;
 				}
 
 		}
@@ -3696,7 +3706,7 @@ input, select, textarea {
 			}
 
 				#main > .main {
-					padding: 2.5em 1em 0.5em 1em ;
+					padding: 2.5em 0 0.5em 0 ;
 				}
 
 					#main > .main > .image.main:first-child {
@@ -4092,4 +4102,30 @@ header.major h2 {
       padding-top: 0px; /* Match nav height on mobile */
     }
   }
-</style>
+
+  #wrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+#main {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#intro.main {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 2rem; /* optional spacing */
+}
+
+.spotlight {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+}
