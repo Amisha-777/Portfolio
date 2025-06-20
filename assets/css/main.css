@@ -4019,19 +4019,21 @@ header.major h2 {
   /* ✅ Default (Desktop) Styles */
   .top-nav {
     width: 100%;
-    background-color: #6A4E9C;
+    background-color: #e0e0e0;
     padding: 20px 30px 0 0;
-    z-index: 999;
+    z-index: 999; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	
   }
 
   .top-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-    gap: 30px;
-    margin: 0;
-    padding: 0 30px;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto; 
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 12px;
   }
 
   .top-nav ul li a {
@@ -4043,6 +4045,7 @@ header.major h2 {
     display: inline-block;
     border-bottom: 1px dotted transparent;
     transition: color 0.3s, border-bottom-color 0.3s;
+    white-space: nowrap;
   }
 
   .top-nav ul li a:hover,
