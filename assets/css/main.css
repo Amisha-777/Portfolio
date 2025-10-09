@@ -3957,7 +3957,7 @@ ul.icons li .icon:before {
 
 /* Apply vertical line separator only between columns */
 @media screen and (min-width: 768px) {
-  .project-item:nth-child(3n)::after {
+  .project-item:nth-child(4n)::after {
     display: none;
   }
 
